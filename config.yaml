@@ -1,0 +1,30 @@
+
+
+template_folder: "templates"
+static_folder: "static"
+
+allowed_image_extensions:
+  - "jpg"
+  - "jpeg"
+  - "png"
+  - "gif"
+  - "svg"
+  - "webp"
+  - "ico"
+  - "tiff"
+  - "tif"
+allowed_video_extensions:
+  - "mp4"
+  - "webm"
+  - "mov"
+  - "flv"
+  - "avi"
+  - "wmv"
+  - "mpg"
+v5_weights_folder: "weights/best.pt"
+v8_weights_folder: "weights/best_M.pt"
+
+
+upload_folder: "uploaded_imgs"
+
+process_folder: "processed_imgs"

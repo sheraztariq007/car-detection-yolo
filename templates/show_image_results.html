@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container-fluid">
+    <h1 class="text-center"> Results for {{filename}} </h1>
+
+    <div class="row p-5">
+        <div class="col-6"><img class="img-thumbnail" src="{{url_for('static',filename=file_v5)}}"></div>
+
+        <div class="col-6"><img class="img-thumbnail" src="{{url_for('static',filename=file_v8)}}"></div>
+    </div>
+
+
+</div>
+
+{% endblock %}

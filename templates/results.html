@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+
+    <h1 class="text-center"> All Results</h1>
+
+    <h3> Images : </h3>
+
+    <div class="row p-5">
+        {% for file in images %}
+        <div class="col-lg-3">
+            <a href="{{url_for('result_separate_image',file_v5=get_yolo_filepath(file,'v5'),
+                        file_v8=get_yolo_filepath(file,'v8'),
+                        filename=file
+                        )}}">
+                <img src=" {{url_for('static',filename=destination_folder+'/'+file)}}" alt="..." class="img-thumbnail">
+            </a>
+            <caption>{{file}}</caption>
+
+        </div>
+        {% endfor %}
+
+    </div>
+    <h3> Vidoes : </h3>
+
+    <div class="row p-5">
+        {% for file in videos %}
+        <div class="col-lg-3">
+
+
+
+
+            <video width="400" controls="controls" preload="metadata">
+                <source src="{{url_for('static',filename=destination_folder+'/'+file)}}">
+            </video>
+            <a href="{{url_for('result_separate_video',file_v5=get_yolo_filepath(file,'v5'),
+                                        file_v8=get_yolo_filepath(file,'v8') )}}">
+                <caption>{{file}}</caption>
+            </a>
+
+        </div>
+        {% endfor %}
+
+    </div>
+
+
+
+</div>
+
+{% endblock %}
